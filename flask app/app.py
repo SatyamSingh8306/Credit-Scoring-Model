@@ -43,9 +43,9 @@ def form_handler():
         df = pd.DataFrame([data])
         val = model.predict(df)
         if val[0]=='good':
-            return render_template('output.html',credit_granted=f"Congratulation you can get the credit")
+            return render_template('output.html',credit_granted=f"Congratulation,You have Good Credit Score")
         else:
-            return render_template('output.html',credit_granted=f"Sorry Better Luck Next Time")
+            return render_template('output.html',credit_granted=f"Sorry,You have Bad Credit Score")
         
 
     
