@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColumnTransformer Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Data Input Form</h2>
+        <form action="/submit" method="POST">
+            <!-- OneHotEncoder Fields -->
+            <label for="prop">Property:</label>
+            <select id="prop" name="prop">
+                <option value="life insurance/building society">life insurance/building society</option>
+                <option value="real state">real state</option>
+                <option value="cars Other etc.">cars Other etc.</option>
+                <option value="unknown">unknown</option>
+            </select>
+
+            <label for="inPlans">In Plans:</label>
+            <select id="inPlans" name="inPlans">
+                <option value="none">None</option>
+                <option value="bank">Bank</option>
+                <option value="stores">Stores</option>
+            </select>
+
+            <label for="jobType">Job Type:</label>
+            <select id="jobType" name="jobType">
+                <option value="employee with official position">employee with official position</option>
+                <option value="resident unskilled">resident unskilled</option>
+                <option value="employed either in management, self or in high position">employed either in management, self or in high position</option>
+                <option value="non resident either unemployed or unskilled">non resident either unemployed or unskilled</option>
+            </select>
+
+            <label for="foreign">Foreign:</label>
+            <select id="foreign" name="foreign">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="telephone">Telephone:</label>
+            <select id="telephone" name="telephone">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- OrdinalEncoder Fields -->
+            <label for="cbal">Checking Account Balance:</label>
+            <select id="cbal" name="cbal">
+                <option value="no checking account">No checking account</option>
+                <option value=" Rs. < 0">Rs. < 0</option>
+                <option value="0 <= Rs. < 2000">0 <= Rs. < 2000</option>
+                <option value="Rs. >=2000">Rs. >=2000</option>
+            </select>
+
+            <label for="chist">Credit History:</label>
+            <select id="chist" name="chist">
+                <option value="all settled till now">All settled till now</option>
+                <option value="dues not paid earlier">Dues not paid earlier</option>
+                <option value="all settled">All settled</option>
+                <option value="none taken/all settled">None taken/all settled</option>
+            </select>
+
+            <label for="edur">Employment Duration:</label>
+            <select id="edur" name="edur">
+                <option value="1 to 4 years">1 to 4 years</option>
+                <option value="more than 7 years">More than 7 years</option>
+                <option value="4 to 7 years">4 to 7 years</option>
+                <option value="less than 1 year">Less than 1 year</option>
+                <option value="not employed">Not employed</option>
+            </select>
+
+            <label for="msg">Marital Status and Gender:</label>
+            <select id="msg" name="msg">
+                <option value="single male">Single Male</option>
+                <option value="divorced or separated or married female">Divorced/Separated/Married Female</option>
+                <option value="married or widowed male">Married or Widowed Male</option>
+                <option value="divorced or separated male">Divorced or Separated Male</option>
+            </select>
+
+            <label for="rdur">Residence Duration:</label>
+            <select id="rdur" name="rdur">
+                <option value="more than 3 years">More than 3 years</option>
+                <option value="1 to 2 years">1 to 2 years</option>
+                <option value="2 to 3 years">2 to 3 years</option>
+                <option value="less than a year">Less than a year</option>
+            </select>
+
+            <label for="htype">Housing Type:</label>
+            <select id="htype" name="htype">
+                <option value="own">Own</option>
+                <option value="pays rent">Pays Rent</option>
+                <option value="free">Free</option>
+            </select>
+
+            <label for="camt">Customer Amount:</label>
+            <input type="number" id="camt" name="camt" step="0.01">
+
+            <!-- Additional Fields -->
+            <label for="c dur">Credit Duration:</label>
+            <input type="number" id="cdur" name="cdur" step="1">
+
+            <label for="inRate">Interest Rate:</label>
+            <input type="number" id="inRate" name="inRate" step="0.01">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" step="1">
+
+            <label for="numCred">Number of Credits:</label>
+            <input type="number" id="numCred" name="numCred" step="1">
+
+            <label for="ndepend">Number of Dependents:</label>
+            <input type="number" id="ndepend" name="ndepend" step="1">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
